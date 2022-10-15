@@ -14,8 +14,8 @@
             filePath = "ScanTextVisionKit/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "configureOCR()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,58 @@
             filePath = "ScanTextVisionKit/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "configureOCR()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B834BBA0-29D4-4A32-B110-A3FB580B498C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScanTextVisionKit/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "configureOCR()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B834BBA0-29D4-4A32-B110-A3FB580B498C - aa719ff1b0da0784"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScanTextVisionKit.ViewController.configureOCR() -&gt; ()"
+                  moduleName = "ScanTextVisionKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcorodriguez/Desktop/SWIFT%20PROYECTS/ScanTextVisionKit/ScanTextVisionKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "B834BBA0-29D4-4A32-B110-A3FB580B498C - 7aba3a4629c647fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.VNRequest, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ScanTextVisionKit.ViewController.configureOCR() -&gt; ()"
+                  moduleName = "ScanTextVisionKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcorodriguez/Desktop/SWIFT%20PROYECTS/ScanTextVisionKit/ScanTextVisionKit/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

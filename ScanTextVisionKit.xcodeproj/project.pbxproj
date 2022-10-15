@@ -14,6 +14,7 @@
 		6064547E28FA5CD700C031D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6064547D28FA5CD700C031D7 /* Assets.xcassets */; };
 		6064548128FA5CD700C031D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6064547F28FA5CD700C031D7 /* LaunchScreen.storyboard */; };
 		6064548928FA666600C031D7 /* VerTextoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6064548828FA666600C031D7 /* VerTextoViewController.swift */; };
+		6064548B28FA73B800C031D7 /* VerDocumentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6064548A28FA73B800C031D7 /* VerDocumentoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6064548028FA5CD700C031D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6064548228FA5CD700C031D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6064548828FA666600C031D7 /* VerTextoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerTextoViewController.swift; sourceTree = "<group>"; };
+		6064548A28FA73B800C031D7 /* VerDocumentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerDocumentoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				6064547F28FA5CD700C031D7 /* LaunchScreen.storyboard */,
 				6064548228FA5CD700C031D7 /* Info.plist */,
 				6064548828FA666600C031D7 /* VerTextoViewController.swift */,
+				6064548A28FA73B800C031D7 /* VerDocumentoViewController.swift */,
 			);
 			path = ScanTextVisionKit;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6064548B28FA73B800C031D7 /* VerDocumentoViewController.swift in Sources */,
 				6064547928FA5CD500C031D7 /* ViewController.swift in Sources */,
 				6064547528FA5CD500C031D7 /* AppDelegate.swift in Sources */,
 				6064547728FA5CD500C031D7 /* SceneDelegate.swift in Sources */,

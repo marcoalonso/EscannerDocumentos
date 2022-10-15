@@ -42,7 +42,7 @@
                                     <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fts-7d-ApU"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kko-er-b34">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kko-er-b34">
                                 <rect key="frame" x="35" y="466" width="320" height="314"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -61,13 +61,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imV-C9-qXv">
-                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="280" y="0.99999999999999645" width="50" height="48.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MCB-FM-aAq"/>
                                             <constraint firstAttribute="width" constant="50" id="tu2-0i-fZc"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title=" " image="search"/>
+                                        <state key="normal" title=" " backgroundImage="text.magnifyingglass" catalog="system"/>
                                         <connections>
                                             <action selector="buscarTextoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2IV-gY-3VB"/>
                                         </connections>
@@ -99,11 +99,42 @@
                         <outlet property="previewTextInDocument" destination="kko-er-b34" id="bCJ-O0-uUR"/>
                         <outlet property="textoBuscar" destination="Fph-TE-FQM" id="Q3E-15-3h9"/>
                         <segue destination="XXf-zQ-sco" kind="show" identifier="verTexto" id="Oq3-iA-jTh"/>
+                        <segue destination="02k-rK-9Bg" kind="presentation" identifier="verDocumento" id="9Nk-LZ-O7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
+        </scene>
+        <!--Ver Documento View Controller-->
+        <scene sceneID="shy-eC-HJF">
+            <objects>
+                <viewController id="02k-rK-9Bg" customClass="VerDocumentoViewController" customModule="ScanTextVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vrx-NL-9EB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instrucciones" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-zd-UyH">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Vi-0M-pbT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgA-zd-UyH" firstAttribute="top" secondItem="Vrx-NL-9EB" secondAttribute="top" id="1ND-Md-yVp"/>
+                            <constraint firstAttribute="bottom" secondItem="hgA-zd-UyH" secondAttribute="bottom" id="RrG-w3-ys5"/>
+                            <constraint firstItem="hgA-zd-UyH" firstAttribute="trailing" secondItem="3Vi-0M-pbT" secondAttribute="trailing" id="Tbe-cl-NNy"/>
+                            <constraint firstItem="hgA-zd-UyH" firstAttribute="leading" secondItem="3Vi-0M-pbT" secondAttribute="leading" id="c8F-up-c2D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NfE-cf-qDI"/>
+                    <connections>
+                        <outlet property="documentoVisualizar" destination="hgA-zd-UyH" id="M4C-Ff-vcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcM-Xk-qWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="688"/>
         </scene>
         <!--Ver Texto View Controller-->
         <scene sceneID="hOc-YY-5l3">
@@ -113,18 +144,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SES-gK-n9B">
-                                <rect key="frame" x="30" y="121" width="330" height="355"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SES-gK-n9B">
+                                <rect key="frame" x="30" y="121" width="330" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="355" id="v2k-NF-VPW"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXQ-6q-nt5">
-                                <rect key="frame" x="30" y="506" width="330" height="50"/>
+                                <rect key="frame" x="30" y="730" width="330" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="el2-b7-XHV"/>
@@ -150,6 +178,7 @@
                             <constraint firstItem="SES-gK-n9B" firstAttribute="top" secondItem="Ta6-kX-jWs" secondAttribute="top" constant="30" id="4vK-5y-0i4"/>
                             <constraint firstItem="Ta6-kX-jWs" firstAttribute="trailing" secondItem="zXQ-6q-nt5" secondAttribute="trailing" constant="30" id="Abc-6N-16R"/>
                             <constraint firstItem="Ta6-kX-jWs" firstAttribute="trailing" secondItem="SES-gK-n9B" secondAttribute="trailing" constant="30" id="adJ-iL-eKq"/>
+                            <constraint firstItem="Ta6-kX-jWs" firstAttribute="bottom" secondItem="zXQ-6q-nt5" secondAttribute="bottom" constant="30" id="ceB-Fo-RUw"/>
                             <constraint firstItem="zXQ-6q-nt5" firstAttribute="top" secondItem="SES-gK-n9B" secondAttribute="bottom" constant="30" id="dai-qv-ceC"/>
                             <constraint firstItem="zXQ-6q-nt5" firstAttribute="leading" secondItem="Ta6-kX-jWs" secondAttribute="leading" constant="30" id="h6E-ZC-L79"/>
                         </constraints>
@@ -184,7 +213,8 @@
     </scenes>
     <resources>
         <image name="docscan" width="512" height="512"/>
-        <image name="search" width="200" height="200"/>
+        <image name="instrucciones" width="858" height="1142"/>
+        <image name="text.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

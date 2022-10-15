@@ -14,9 +14,9 @@ class VerTextoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for palabra in palabrasEncontradas {
-            palabrasEncontradasTextView.text = palabrasEncontradasTextView.text + "\n" + "---> " + palabra
+     
+        for (indice, palabra) in palabrasEncontradas.enumerated() {
+            palabrasEncontradasTextView.text = palabrasEncontradasTextView.text + "\n" + "\(indice).- " + palabra
         }
     }
     

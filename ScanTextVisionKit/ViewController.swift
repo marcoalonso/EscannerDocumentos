@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     private var ocrRequest = VNRecognizeTextRequest(completionHandler: nil)
     
     var huboCoincidencias: Bool = false
+    var documentoEscaneado: Bool = false
+    
     var palabrasEncontradas: [String] = []
     let scanVC = VNDocumentCameraViewController()
     
@@ -51,11 +53,14 @@ class ViewController: UIViewController {
         ocrRequest = VNRecognizeTextRequest { (request, error) in
             guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
             
+            //Si buscamos de nuevo es necesario limpiar las palabras
+            self.palabrasEncontradas.removeAll()
+            
             for observation in observations {
                 guard let topCandidate = observation.topCandidates(1).first else { return }
                 
                 self.previewTextInDocument.text =  self.previewTextInDocument.text + "\n" + topCandidate.string
-                if let textoBuscar = self.textoBuscar.text {
+                if let textoBuscar = self.textoBuscar.text?.replacingOccurrences(of: " ", with: "") {
                     if topCandidate.string.contains("\(textoBuscar)") {
                         print("DEBUG: Texto Encontrado!")
                         self.huboCoincidencias = true
@@ -83,6 +88,24 @@ class ViewController: UIViewController {
             alerta.addAction(accionAceptar)
             alerta.addAction(accionCancelar)
             self.present(alerta, animated: true)
+        } else {
+            let alerta = UIAlertController(title: "¡UPS!", message: "No se ah tomado ninguna foto o NO se encontraron coincidencias.", preferredStyle: .alert)
+            let accionAceptar = UIAlertAction(title: "Tomar foto", style: .default) { (_) in
+                self.present(self.scanVC, animated: true)
+            }
+            
+            let buscarNuevo = UIAlertAction(title: "Buscar otra(s) palabra(s)", style: .default) { (_) in
+                
+            }
+            
+            let accionCancelar = UIAlertAction(title: "Quero Salir", style: .destructive) { _ in
+                exit(0)
+            }
+            alerta.addAction(accionAceptar)
+            
+            alerta.addAction(buscarNuevo)
+            alerta.addAction(accionCancelar)
+            self.present(alerta, animated: true)
         }
     }
     
@@ -93,7 +116,7 @@ class ViewController: UIViewController {
         }
         
         if segue.identifier == "verDocumento" {
-            if huboCoincidencias {
+            if documentoEscaneado {
                 let detalleDocumento = segue.destination as! VerDocumentoViewController
                 detalleDocumento.recibirDocumentoMostrar = previewDocImage.image
                 detalleDocumento.fotoTomada = true
@@ -130,6 +153,7 @@ extension ViewController: VNDocumentCameraViewControllerDelegate {
             
         }
 //        configureOCR()
+        documentoEscaneado = true
     }
     
     

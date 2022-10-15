@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PdR-qK-aGh">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Document Scanner 📄-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScanTextVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="docscan" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-WZ-OTz">
+                                <rect key="frame" x="30" y="171" width="330" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6BE-Vh-M96"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-SV-c2y">
+                                <rect key="frame" x="30" y="381" width="330" height="50"/>
+                                <color key="backgroundColor" red="0.28627452250000002" green="0.58039218189999997" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dz7-2D-QVl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ESCANEAR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kko-er-b34">
+                                <rect key="frame" x="35" y="466" width="320" height="314"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="¿Buscas algo? Escribelo aqui" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-TE-FQM">
+                                <rect key="frame" x="30" y="101" width="330" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="htH-H7-AwB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lUh-WZ-OTz" firstAttribute="top" secondItem="Fph-TE-FQM" secondAttribute="bottom" constant="20" id="47h-Wc-Pty"/>
+                            <constraint firstItem="mxX-SV-c2y" firstAttribute="top" secondItem="lUh-WZ-OTz" secondAttribute="bottom" constant="10" id="5Wb-BI-5hN"/>
+                            <constraint firstItem="mxX-SV-c2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5bl-eV-kXL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mxX-SV-c2y" secondAttribute="trailing" constant="30" id="9oe-co-EuA"/>
+                            <constraint firstItem="lUh-WZ-OTz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="AEU-o4-ZG8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kko-er-b34" secondAttribute="bottom" constant="30" id="AcB-8R-SYo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fph-TE-FQM" secondAttribute="trailing" constant="30" id="M67-cg-3sA"/>
+                            <constraint firstItem="Fph-TE-FQM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NBS-qD-rTt"/>
+                            <constraint firstItem="kko-er-b34" firstAttribute="top" secondItem="mxX-SV-c2y" secondAttribute="bottom" constant="35" id="Wh2-YA-CzP"/>
+                            <constraint firstItem="Fph-TE-FQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gzS-ZN-gb1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kko-er-b34" secondAttribute="trailing" constant="35" id="m3L-tg-lL7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lUh-WZ-OTz" secondAttribute="trailing" constant="30" id="pry-A8-AgG"/>
+                            <constraint firstItem="kko-er-b34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="ugk-RZ-uam"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Document Scanner 📄" id="yYg-7R-tGn"/>
+                    <connections>
+                        <segue destination="XXf-zQ-sco" kind="show" identifier="verTexto" id="Oq3-iA-jTh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hOc-YY-5l3">
+            <objects>
+                <viewController id="XXf-zQ-sco" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fg2-o4-5n2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SES-gK-n9B">
+                                <rect key="frame" x="30" y="121" width="330" height="355"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="v2k-NF-VPW"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXQ-6q-nt5">
+                                <rect key="frame" x="30" y="506" width="330" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="el2-b7-XHV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Nuevo escanner"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ta6-kX-jWs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SES-gK-n9B" firstAttribute="leading" secondItem="Ta6-kX-jWs" secondAttribute="leading" constant="30" id="3ZU-43-OmW"/>
+                            <constraint firstItem="SES-gK-n9B" firstAttribute="top" secondItem="Ta6-kX-jWs" secondAttribute="top" constant="30" id="4vK-5y-0i4"/>
+                            <constraint firstItem="Ta6-kX-jWs" firstAttribute="trailing" secondItem="zXQ-6q-nt5" secondAttribute="trailing" constant="30" id="Abc-6N-16R"/>
+                            <constraint firstItem="Ta6-kX-jWs" firstAttribute="trailing" secondItem="SES-gK-n9B" secondAttribute="trailing" constant="30" id="adJ-iL-eKq"/>
+                            <constraint firstItem="zXQ-6q-nt5" firstAttribute="top" secondItem="SES-gK-n9B" secondAttribute="bottom" constant="30" id="dai-qv-ceC"/>
+                            <constraint firstItem="zXQ-6q-nt5" firstAttribute="leading" secondItem="Ta6-kX-jWs" secondAttribute="leading" constant="30" id="h6E-ZC-L79"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pdz-r4-eh0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIH-t0-7nA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.8461538461538" y="-28.436018957345969"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QrP-pe-ea5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PdR-qK-aGh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bFs-ty-M3a">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ktp-4q-eIS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbv-i7-Nti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.84615384615384" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="docscan" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

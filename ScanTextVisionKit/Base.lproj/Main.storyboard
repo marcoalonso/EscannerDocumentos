@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PdR-qK-aGh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,6 +38,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fts-7d-ApU"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kko-er-b34">
                                 <rect key="frame" x="35" y="466" width="320" height="314"/>
@@ -45,28 +49,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="¿Buscas algo? Escribelo aqui" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-TE-FQM">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-Tt-RWP">
                                 <rect key="frame" x="30" y="101" width="330" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="htH-H7-AwB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="¿Buscas algo? Escribelo aqui..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-TE-FQM">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="htH-H7-AwB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imV-C9-qXv">
+                                        <rect key="frame" x="280" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MCB-FM-aAq"/>
+                                            <constraint firstAttribute="width" constant="50" id="tu2-0i-fZc"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" " image="search"/>
+                                        <connections>
+                                            <action selector="buscarTextoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2IV-gY-3VB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lUh-WZ-OTz" firstAttribute="top" secondItem="Fph-TE-FQM" secondAttribute="bottom" constant="20" id="47h-Wc-Pty"/>
+                            <constraint firstItem="xBE-Tt-RWP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="2gI-XN-2Ru"/>
                             <constraint firstItem="mxX-SV-c2y" firstAttribute="top" secondItem="lUh-WZ-OTz" secondAttribute="bottom" constant="10" id="5Wb-BI-5hN"/>
                             <constraint firstItem="mxX-SV-c2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5bl-eV-kXL"/>
+                            <constraint firstItem="lUh-WZ-OTz" firstAttribute="top" secondItem="xBE-Tt-RWP" secondAttribute="bottom" constant="20" id="5hh-u6-gEt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xBE-Tt-RWP" secondAttribute="trailing" constant="30" id="7pC-dg-e3i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mxX-SV-c2y" secondAttribute="trailing" constant="30" id="9oe-co-EuA"/>
                             <constraint firstItem="lUh-WZ-OTz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="AEU-o4-ZG8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kko-er-b34" secondAttribute="bottom" constant="30" id="AcB-8R-SYo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fph-TE-FQM" secondAttribute="trailing" constant="30" id="M67-cg-3sA"/>
-                            <constraint firstItem="Fph-TE-FQM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NBS-qD-rTt"/>
+                            <constraint firstItem="xBE-Tt-RWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UPz-HS-ch3"/>
                             <constraint firstItem="kko-er-b34" firstAttribute="top" secondItem="mxX-SV-c2y" secondAttribute="bottom" constant="35" id="Wh2-YA-CzP"/>
-                            <constraint firstItem="Fph-TE-FQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gzS-ZN-gb1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kko-er-b34" secondAttribute="trailing" constant="35" id="m3L-tg-lL7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lUh-WZ-OTz" secondAttribute="trailing" constant="30" id="pry-A8-AgG"/>
                             <constraint firstItem="kko-er-b34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="ugk-RZ-uam"/>
@@ -74,6 +95,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Document Scanner 📄" id="yYg-7R-tGn"/>
                     <connections>
+                        <outlet property="previewDocImage" destination="lUh-WZ-OTz" id="uHX-fF-yyF"/>
+                        <outlet property="previewTextInDocument" destination="kko-er-b34" id="bCJ-O0-uUR"/>
+                        <outlet property="textoBuscar" destination="Fph-TE-FQM" id="Q3E-15-3h9"/>
                         <segue destination="XXf-zQ-sco" kind="show" identifier="verTexto" id="Oq3-iA-jTh"/>
                     </connections>
                 </viewController>
@@ -81,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
         </scene>
-        <!--View Controller-->
+        <!--Ver Texto View Controller-->
         <scene sceneID="hOc-YY-5l3">
             <objects>
-                <viewController id="XXf-zQ-sco" sceneMemberID="viewController">
+                <viewController id="XXf-zQ-sco" customClass="VerTextoViewController" customModule="ScanTextVisionKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fg2-o4-5n2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,9 +119,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="355" id="v2k-NF-VPW"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXQ-6q-nt5">
@@ -115,6 +138,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nuevoEscanner:" destination="XXf-zQ-sco" eventType="touchUpInside" id="hJI-Fz-uhZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ta6-kX-jWs"/>
@@ -129,10 +155,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdz-r4-eh0"/>
+                    <connections>
+                        <outlet property="palabrasEncontradasTextView" destination="SES-gK-n9B" id="yuR-Kk-gOw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIH-t0-7nA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753.8461538461538" y="-28.436018957345969"/>
+            <point key="canvasLocation" x="1800" y="-39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QrP-pe-ea5">
@@ -155,6 +184,7 @@
     </scenes>
     <resources>
         <image name="docscan" width="512" height="512"/>
+        <image name="search" width="200" height="200"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
